@@ -1,4 +1,20 @@
-function init(){
-  console.log('CIAO');
+function prevClick() {
+  console.log('prev');
+
 }
-init();
+
+
+function nextClick(){
+  console.log('next');
+}
+
+
+
+
+
+
+function init(){
+  $('.prev').click(prevClick);
+  $('.next').click(nextClick)
+}
+$(document).ready(init);
