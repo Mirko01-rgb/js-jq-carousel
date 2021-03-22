@@ -1,11 +1,13 @@
 function prevClick() {
-  console.log('prev');
-
+  // console.log('prev');
+  var firstimg = $('img.active')
+  // console.log(firstimg);
+  $('img').addClass('active');
 }
 
 
 function nextClick(){
-  console.log('next');
+  // console.log('next');
 }
 
 
