@@ -1,12 +1,14 @@
 function prevClick() {
   // console.log('prev');
-  var firstImg = $('.active');
-  if (firstImg.hasClass('first')) {
-
+  var activeImg = $('.active');
+  if (activeImg.hasClass('first')) {
+    var nextImg = $('img.last');
+    activeImg.removeClass('active');
+    nextImg.addClass('active');
   }
   else {
-    var prevImg = firstImg.prev('img');
-    firstImg.removeClass('active');
+    var prevImg = activeImg.prev('img');
+    activeImg.removeClass('active');
     prevImg.addClass('active');
   }
 
@@ -14,15 +16,17 @@ function prevClick() {
 
 
 function nextClick(){
-  var firstImg = $('.active');   //seleziona qualsiasi elemento che ha  la classe active
-  // console.log(firstImg);
-  if (firstImg.hasClass('last')) {
-
+  var activeImg = $('.active');   //seleziona qualsiasi elemento che ha  la classe active
+  // console.log(activeImg);
+  if (activeImg.hasClass('last')) {
+    var nextImg = $('img.first');
+    activeImg.removeClass('active');
+    nextImg.addClass('active');
   }
   else {
-    var nextImg = firstImg.next('img') // quello che viene subito dopo
+    var nextImg = activeImg.next('img') // quello che viene subito dopo
     // console.log(nextImg);
-    firstImg.removeClass('active');
+    activeImg.removeClass('active');
     nextImg.addClass('active');
   }
 
